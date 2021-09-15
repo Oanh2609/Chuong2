@@ -13,10 +13,15 @@ namespace Chuong2.Controllers
     public class EmployeesController : Controller
     {
         private LapTrinhQuanLyDBcontext db = new LapTrinhQuanLyDBcontext();
+        AutogenerateKey aukey = new AutogenerateKey();
 
         // GET: Employees
         public ActionResult Index()
         {
+            // lấy giá trị bằng key cuối cùng trong đỗi tượng person
+            var perID = db.Persons.OrderByDescending(m => m.PersonID).FirstOrDefault().PersonID;
+            var newID = aukey.GenerateKey(perID);
+            ViewBag.newPerID = newID;
             return View(db.Employees.ToList());
         }
 
