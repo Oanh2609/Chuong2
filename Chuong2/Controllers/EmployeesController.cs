@@ -19,9 +19,7 @@ namespace Chuong2.Controllers
         public ActionResult Index()
         {
             // lấy giá trị bằng key cuối cùng trong đỗi tượng person
-            var perID = db.Persons.OrderByDescending(m => m.PersonID).FirstOrDefault().PersonID;
-            var newID = aukey.GenerateKey(perID);
-            ViewBag.newPerID = newID;
+           
             return View(db.Employees.ToList());
         }
 
@@ -43,6 +41,9 @@ namespace Chuong2.Controllers
         // GET: Employees/Create
         public ActionResult Create()
         {
+            var perID = db.Persons.OrderByDescending(m => m.PersonID).FirstOrDefault().PersonID;
+            var newID = aukey.GenerateKey(perID);
+            ViewBag.newPerID = newID;
             return View();
         }
 
