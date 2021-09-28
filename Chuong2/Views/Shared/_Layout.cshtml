@@ -26,8 +26,8 @@
                     <li>@Html.ActionLink("Person", "Index", "Person")</li>
                     <li>@Html.ActionLink("Employee", "Index", "Employees")</li>
                     <li>@Html.ActionLink("Student", "Index", "Student")</li>
-                    
-                    
+
+
                 </ul>
             </div>
         </div>
@@ -40,7 +40,9 @@
         </footer>
     </div>
 
+    <script src="~/Scripts/bootstrap.js"></script>
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/ckEditor")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
