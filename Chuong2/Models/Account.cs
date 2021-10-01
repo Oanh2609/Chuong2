@@ -11,6 +11,12 @@ namespace Chuong2.Models
     {
         [Key]
         [StringLength(50)]
+        [Required(ErrorMessage = "User name is required")]
+
+        public string UserName { get; set }
+
+        [Required(ErrorMessage = "User name is required")]
+        [DataType(DataType.Password)]
         public string Username { get; set; }
 
         [StringLength(50)]
