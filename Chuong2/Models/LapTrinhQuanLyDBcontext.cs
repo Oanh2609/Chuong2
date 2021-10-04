@@ -18,11 +18,11 @@ namespace Chuong2.Models
         public virtual DbSet<Person> Persons { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>()
                 .Property(e => e.Password)
-                .IsUnicode(false);
+                .IsUnicode(false);*/
         }
     }
-}
+

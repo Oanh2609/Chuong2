@@ -155,7 +155,6 @@
       <DependentUpon>202109140650067_create_table_employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AutogenerateKey.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\GiaiPhuongTrinh.cs" />
@@ -571,6 +570,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admins\Data\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -598,6 +598,9 @@
     <EmbeddedResource Include="Migrations\202109140650067_create_table_employee.resx">
       <DependentUpon>202109140650067_create_table_employee.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
